@@ -1,0 +1,29 @@
+.footer {
+  background-color: #2c3e50;
+  width: 100% !important;
+}
+.footer .content {
+  padding-block: 70px;
+}
+.web,
+.about,
+.location {
+  width: 33%;
+}
+.web .icons {
+  width: 45%;
+}
+.web .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+.copyright {
+  background-color: #1a252f;
+
+  padding-block: 30px;
+}

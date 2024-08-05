@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div
+    class="content d-flex justify-content-center align-items-center flex-column text-color pt-4"
+  >
+    <h2 class="h1">PORTFOLIO COMPONENT</h2>
+    <div class="before"></div>
+    <i class="fa-solid fa-star"></i>
+    <div class="after"></div>
+  </div>
+  <div class="portofilio mb-4">
+    <div class="container">
+      <div class="row g-5">
+        @for (port of portList; track $index) {
+        <div class="col-md-4">
+          <div class="img rounded-2" (click)="previewImage($index)">
+            <img [src]="port" class="card-img-top rounded-2" alt="..." />
+            <div
+              class="layer rounded-2 d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </div>
+        } @empty {
+        <h2>Not Avialable</h2>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="lightbox d-none" #lightbox (click)="closePreview()">
+    <div class="lightbox-img w-15">
+      <img [src]="currentImage" alt="" />
+    </div>
+  </div>
+</div>
